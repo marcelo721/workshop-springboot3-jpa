@@ -39,7 +39,7 @@ public class OrderItemPK implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof OrderItemPK that)) return false;
-        return getOrder().equals(that.getOrder()) && getProduct().equals(that.getProduct());
+        return Objects.equals(getOrder(), that.getOrder()) && Objects.equals(getProduct(), that.getProduct());
     }
 
     @Override
